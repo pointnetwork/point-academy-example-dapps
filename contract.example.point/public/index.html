@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Contract Example dApp</title>
+    <link rel="stylesheet" href="/assets/app.css">
+    <script src="/assets/app.js"></script>
+</head>
+<body>
+    <div>
+      <h1>Contract Example dApp</h1>
+      <h4>Using Point SDK Version: <span id="pointSDKVersion"></span></h4>
+      <div>
+        <b>Update value in SimpleStore contract!</b>
+      </div>
+      <p>Current Value: <b id="valueText"></b></p>
+      <br />
+      <div>
+        <input id="valueInput" type="text" name="valueInput" placeholder="Enter some text" />
+      </div>
+      <br />
+      <button id="btnStorageValueUpdate" onclick="updateStorageValue()">Update Value</button>
+    </div>
+    <script>
+      (async () => {
+        let contract = await window.point.contract.load({contract: 'SimpleStorage'});
+        let contractValue = await window.point.contract.call({contract: 'SimpleStorage', method: 'retrieve'});
+
+        document.getElementById("valueText").innerHTML = contractValue.data;
+        document.getElementById("pointSDKVersion").innerText = point.version;
+      })()
+    </script>
+  </body>
+
+</html>

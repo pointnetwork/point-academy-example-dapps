@@ -1,0 +1,8 @@
+{
+    "version": 0.1,
+    "target": "contract.example.point",
+    "keyvalue": {},
+    "contracts": ["SimpleStorage"],
+    "upgradable": false,
+    "rootDir": "public"
+}
