@@ -1,0 +1,8 @@
+{
+    "version": 0.1,
+    "target": "imageupload.example.point",
+    "keyvalue": {},
+    "contracts": ["ImageStore"],
+    "upgradable": false,
+    "rootDir": "public"
+}
