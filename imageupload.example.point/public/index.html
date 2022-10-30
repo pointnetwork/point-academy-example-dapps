@@ -8,25 +8,30 @@
 </head>
 <body>
 
-    <h1>Upload an Image to Point Network</h1>
+<h1>Upload an Image to Point Network</h1>
 
-    <h3>Try uploading an image!</h3>
-    <br />
-    <br />
-        <input id="fileupload" type="file" name="fileupload"></input>
-    <br />
-    <br />
-        <button id="btnFileupload" onclick="uploadImage()">Upload Image</button>
-    <br />
-    <br />
-        <img id='storageImg'/>
-    <br />
-    <br />
+<h3>Try uploading an image!</h3>
+<br />
+<br />
 
-    <script>
-        (async () => {
-            await fetchImage()
-        })()
-    </script>
+<!-- input -->
+<input id="fileupload" type="file" name="fileUpload"></input>
+<br />
+<br />
+<!-- button -->
+<button id="btnFileUpload" onclick="uploadImage()">Upload Image</button>
+<br />
+<br />
+<!-- img -->
+<img id="storageImg"/>
+<br />
+<br />
+
+<script>
+    (async ()=> {
+        await fetchImage();
+    })();
+</script>
+
 </body>
 </html>
